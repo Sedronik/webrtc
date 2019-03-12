@@ -9,4 +9,5 @@
 + TURN server
 + [Stream Control Transmission Protocol](https://developer.mozilla.org/en-US/docs/Glossary/SCTP)
 + [Datagram Transport Layer Security](https://developer.mozilla.org/en-US/docs/Glossary/DTLS)
-+
++ PTSNs
++ dual-tone multi-frequency (DTMF)
