@@ -5,7 +5,7 @@
 + back-channel information
 + [datachannel](https://developer.mozilla.org/en-US/docs/Web/Events/datachannel)
 + SDP descriptor
-+ internet connectivity establishment (ICE) server
++ [ICE Servers](#ICE)
 + [STUN server](#STUN)
 + [TURN server](#TURN)
 + [Stream Control Transmission Protocol](https://developer.mozilla.org/en-US/docs/Glossary/SCTP)
@@ -21,11 +21,12 @@ WebRTC communicate data streaming between browsers user [RTCPeerConnection](http
 ### STUN
 
 *STUN* stands for Session Traversal Utilities for NAT (Network Address Transalator). According to Wikipedia
-> STUN is a standerdized set of methods, including a network protocol, for traversal pf network address translator gateways in applications of real time voice, video, messaging and other interactive communications.
+> STUN is a standerdized set of methods, including a network protocol, for traversal of network address translator gateways in applications of real time voice, video, messaging and other interactive communications.
 
-WebRTC is designed to work peer-to-peer, so users can connect directly but because some users may be behind _firewalls_or _NAT gateways_ connections may be blocked thereby causing a connection failure, WebRTC uses STUN and [TURN](/#TURN) servers to mitigate this problem. It basically uses STUN to get the users IP addresses and then uses TURN to relay the transported media between the two clients thereby establishing a reliable connection between the two partys.
+WebRTC is designed to work peer-to-peer, so users can connect directly but because some users may be behind _firewalls_ or _NAT gateways_ connections may be blocked thereby causing a connection failure, WebRTC uses STUN and [TURN](#TURN) servers to mitigate this problem. It basically uses STUN to get the users IP addresses and then uses TURN to relay the transported media between the two clients thereby establishing a reliable connection between the two partys.
 
 ![TURN_and_STUN](turn1.jpg)
+
 _image credit [avaya](https://www.avaya.com/blogs/archives/2014/08/understanding-webrtc-media-connections-ice-stun-and-turn.html)_
 
 ### TURN
@@ -37,7 +38,7 @@ WebRTC basically uses TURN when STUN only connection fails, it uses [ICE](https:
 
 
 ### ICE
-*ICE* stands for Intenet Connectivity Establishment. It is a technique that allows computer networks to find the best ways tot talk to each other as directly as possible. WebRTC uses ICE to decide when to use TURN if STUN fails due to Symmetric NATs, Firewalls or other network barriers.
+*ICE* stands for Intenet Connectivity Establishment. It is a technique that allows computer networks to find the best ways to talk to each other as directly as possible. WebRTC uses ICE to decide when to use TURN if STUN fails due to Symmetric NATs, Firewalls or other network barriers.
 
 ### Security
 
