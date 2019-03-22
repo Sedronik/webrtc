@@ -26,6 +26,7 @@ WebRTC communicate data streaming between browsers user [RTCPeerConnection](http
 WebRTC is designed to work peer-to-peer, so users can connect directly but because some users may be behind _firewalls_or _NAT gateways_ connections may be blocked thereby causing a connection failure, WebRTC uses STUN and [TURN](/#TURN) servers to mitigate this problem. It basically uses STUN to get the users IP addresses and then uses TURN to relay the transported media between the two clients thereby establishing a reliable connection between the two partys.
 
 ![TURN_and_STUN](turn1.jpg)
+_image credit [avaya](https://www.avaya.com/blogs/archives/2014/08/understanding-webrtc-media-connections-ice-stun-and-turn.html)_
 
 ### TURN
 *TURN* stands for Traversal Using Relays around NAT:
