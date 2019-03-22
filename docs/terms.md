@@ -5,6 +5,8 @@
 + back-channel information
 + [datachannel](https://developer.mozilla.org/en-US/docs/Web/Events/datachannel)
 + SDP descriptor
++ [NAT gateways](#NATs)
++ [Symetric NATs](#Symetric-NATs)
 + [ICE Servers](#ICE)
 + [STUN server](#STUN)
 + [TURN server](#TURN)
@@ -18,8 +20,13 @@
 
 WebRTC communicate data streaming between browsers user [RTCPeerConnection](https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection). It uses a mechanism called _Signaling_ to coordinate communication and to send control messages. There are many [signaling methods and protocols](https://github.com/muaz-khan/WebRTC-Experiment/blob/master/Signaling.md) out there.
 
-### STUN
+### NATs
+*NAT* stands for Network Address Translation. Network Address Translation is a method by which IP addresses are mapped from one realm to another, in an attempt to provide transparent routing to hosts [RFC2663](https://tools.ietf.org/html/rfc2663). In English, it's basically a technique used to give internet access to private IP addresses by remapping them to a public IP address to enable internet connection.
 
+### Symetric NATs
+*Symetric NAT* basically does the same thing NAT do. They translate both the IP addresses and the ports.
+
+### STUN
 *STUN* stands for Session Traversal Utilities for NAT (Network Address Transalator). According to Wikipedia
 > STUN is a standerdized set of methods, including a network protocol, for traversal of network address translator gateways in applications of real time voice, video, messaging and other interactive communications.
 
@@ -38,7 +45,7 @@ WebRTC basically uses TURN when STUN only connection fails, it uses [ICE](https:
 
 
 ### ICE
-*ICE* stands for Intenet Connectivity Establishment. It is a technique that allows computer networks to find the best ways to talk to each other as directly as possible. WebRTC uses ICE to decide when to use TURN if STUN fails due to Symmetric NATs, Firewalls or other network barriers.
+*ICE* stands for Internet Connectivity Establishment. It is a technique that allows computer networks to find the best ways to talk to each other as directly as possible. WebRTC uses ICE to decide when to use TURN if STUN fails due to Symmetric NATs, Firewalls or other network barriers.
 
 ### Security
 
